@@ -1,54 +1,59 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  padding: 50px;
+:root {
+    --main-bg-color: white;
+    --text-color: black;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+header{
+    display: flex;
+    justify-content: space-around;
+}
+header div{
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(135deg, rgb(255, 117, 117), rgb(255, 199, 96));
+    border-radius: 5px;
+}
+#toggle_theme{
+    width: 8vw;
+    height: 4vh;
+    border-radius: 5px;
+}
+main{
+    padding: 0 5vw 0 5vw;
+}
+main h1, h3, h4{
+    display: flex;
+    justify-self: center;
+    width: auto;
+}
+main h3, h4{
+    font: italic;
+    font-size: 1.8vw;
+    font-weight: normal;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, transparent 80%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
 }
 
-.container {
-  background: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 300px;
+main p{
+    text-align:justify;
 }
-
-h1 {
-  text-align: center;
-}
-
-.input-section {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-input {
-  flex: 1;
-  padding: 8px;
-}
-
-button {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #eee;
-  margin-bottom: 10px;
-  padding: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-li.completed {
-  text-decoration: line-through;
-  color: #999;
+footer{
+    display: flex;
+    padding: 0 5vw 0 5vw;
+    justify-content: center;
 }

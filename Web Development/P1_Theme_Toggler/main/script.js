@@ -1,27 +1,23 @@
-const taskInput = document.getElementById('task-input');
-const addTaskBtn = document.getElementById('add-task');
-const taskList = document.getElementById('task-list');
+const theme_toggler = document.getElementById('toggle_theme')
+console.log(theme_toggler)
 
-addTaskBtn.addEventListener('click', () => {
-  const taskText = taskInput.value.trim();
-  if (taskText !== '') {
-    addTask(taskText);
-    taskInput.value = '';
-  }
-});
+const bg = document.querySelector('body')
+    
+let theme_light = true
 
-function addTask(text) {
-  const li = document.createElement('li');
-  li.textContent = text;
-
-  const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = '❌';
-  deleteBtn.onclick = () => li.remove();
-
-  li.addEventListener('click', () => {
-    li.classList.toggle('completed');
-  });
-
-  li.appendChild(deleteBtn);
-  taskList.appendChild(li);
-}
+theme_toggler.addEventListener('click', ()=>{
+    //Toggle Dark
+    if(theme_light){     
+        bg.style.backgroundColor = 'black'
+        bg.style.color = 'white';
+        theme_toggler.style.backgroundColor = 'rgb(87, 85, 85)';
+        theme_light = false
+    }
+    //Toggle Light
+    else{
+        bg.style.backgroundColor = 'white'
+        bg.style.color = 'black';
+        theme_toggler.style.backgroundColor = 'white'
+        theme_light = true
+    }
+})
