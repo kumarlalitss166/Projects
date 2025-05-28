@@ -1,6 +1,6 @@
 :root {
     --main-bg-color: white;
-    --text-color: black;
+    --text-color: rgb(31, 31, 31);
 }
 * {
     margin: 0;
@@ -26,7 +26,7 @@ header div{
 #toggle_theme{
     width: 8vw;
     height: 75%;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 main{
     padding: 0 5vw 0 5vw;
