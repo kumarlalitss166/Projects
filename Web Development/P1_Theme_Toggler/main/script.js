@@ -6,85 +6,56 @@ let theme_light = true
 
 //Loading saved theme and position
 let savedTheme = localStorage.getItem('theme');
-let savedPos = localStorage.getItem('Cpos');
 
 //Default to system theme
-let Cpos = localStorage.getItem('Cpos')
 if (!savedTheme){
     //Checks for system default theme
     savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     localStorage.setItem('theme', savedTheme);
 }
 
-//Apply saved theme
-if (savedTheme === 'dark'){
-    bg.style.backgroundColor = 'rgb(31, 31, 31)';
-    bg.style.color = 'white';
-    theme_toggler.style.backgroundColor = 'rgb(87, 85, 85)';
-    theme_light = false;
-    circle.style.backgroundColor = 'white';
-}
-else{
-    bg.style.backgroundColor = 'white';
-    bg.style.color = 'rgb(31, 31, 31)';
-    theme_toggler.style.backgroundColor = 'white';
-    theme_light = true;
-}
-
-//Apply saved circle postion or set Default
-if (savedPos){
-    circle.style.left = savedPos;
-}
-else{
-    circle.style.left = '5px';
-    localStorage.setItem('Cpos', '5px');
-}
-
-//Button click handler
-function moveCircle(event) {
-    const circle = document.getElementById('circle');
-    const clickX = event.offsetX;
-    const middle = theme_toggler.offsetWidth / 2;
-    let when_light;
-    let when_dark;
-    if (clickX < middle) {
-        // Move to left
-        circle.style.left = "5px";
-        localStorage.setItem('Cpos', '5px')
-        circle.style.background = 'linear-gradient(white 100%)'
-    } 
-    else {
-        // Move to right
+//Apply saved theme and set circle position/color accordingly
+function applyTheme(theme) {
+    if (theme === 'dark'){
+        bg.style.backgroundColor = 'rgb(31, 31, 31)';
+        bg.style.color = 'white';
+        theme_toggler.style.backgroundColor = 'rgb(87, 85, 85)';
+        theme_light = false;
+        
+        // Circle should be white in dark theme and positioned right
+        circle.style.backgroundColor = 'white';
+        circle.style.borderColor = 'white';
         const rightPos = (theme_toggler.offsetWidth - circle.offsetWidth - 5) + 'px';
         circle.style.left = rightPos;
-        circle.style.background = 'linear-gradient(black 100%)'
-        localStorage.setItem('Cpos', rightPos);
+    }
+    else{
+        bg.style.backgroundColor = 'white';
+        bg.style.color = 'rgb(31, 31, 31)';
+        theme_toggler.style.backgroundColor = '#ddd';
+        theme_light = true;
+        
+        // Circle should be black in light theme and positioned left
+        circle.style.backgroundColor = 'black';
+        circle.style.borderColor = 'black';
+        circle.style.left = '5px';
     }
 }
 
+// Apply saved theme on load
+applyTheme(savedTheme);
+
 //Event Listener on toggle
 theme_toggler.addEventListener('click', (event)=>{
-
     console.log(event.target.id, "theme applied.");
 
     //Toggle Dark
     if(theme_light){     
-        bg.style.backgroundColor = 'rgb(31, 31, 31)'
-        bg.style.color = 'white';
-        theme_toggler.style.backgroundColor = 'rgb(87, 85, 85)';
-        theme_light = false
-        
-        localStorage.setItem('theme', 'dark')
-        
+        applyTheme('dark');
+        localStorage.setItem('theme', 'dark');
     }
     //Toggle Light
     else{
-        bg.style.backgroundColor = 'white'
-        bg.style.color = 'rgb(31, 31, 31)';
-        theme_toggler.style.backgroundColor = 'white';
-        theme_light = true;
-
+        applyTheme('light');
         localStorage.setItem('theme', 'light');
     }
 })
-
