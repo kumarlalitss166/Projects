@@ -12,6 +12,7 @@ body{
     color: var(--text-color);
     width: 100vw;
     height: 100vh;
+    transition: background-color 0.4s, color 0.4s;
 }
 header{
     display: flex;
@@ -27,7 +28,7 @@ header div{
 }
 #toggle_theme {
     position: relative;
-    width: 8vw;
+    width: 4vw;
     height: 75%;
     background-color: #ddd;
     border: none;
@@ -42,10 +43,10 @@ header div{
     left: 5px;
     width: 20px;
     height: 20px;
-    background: linear-gradient(90deg, white 50%, rgb(87, 85, 85) 50%);
+    background-color: black;
     border: solid black 1px;
     border-radius: 50%;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease; background-color: 0.3s ease;
 }
 main{
     padding: 0 5vw 0 5vw;

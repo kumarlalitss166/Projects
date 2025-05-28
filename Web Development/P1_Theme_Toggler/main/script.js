@@ -22,6 +22,7 @@ if (savedTheme === 'dark'){
     bg.style.color = 'white';
     theme_toggler.style.backgroundColor = 'rgb(87, 85, 85)';
     theme_light = false;
+    circle.style.backgroundColor = 'white';
 }
 else{
     bg.style.backgroundColor = 'white';
@@ -50,11 +51,13 @@ function moveCircle(event) {
         // Move to left
         circle.style.left = "5px";
         localStorage.setItem('Cpos', '5px')
+        circle.style.background = 'linear-gradient(white 100%)'
     } 
     else {
         // Move to right
         const rightPos = (theme_toggler.offsetWidth - circle.offsetWidth - 5) + 'px';
         circle.style.left = rightPos;
+        circle.style.background = 'linear-gradient(black 100%)'
         localStorage.setItem('Cpos', rightPos);
     }
 }
@@ -70,7 +73,7 @@ theme_toggler.addEventListener('click', (event)=>{
         bg.style.color = 'white';
         theme_toggler.style.backgroundColor = 'rgb(87, 85, 85)';
         theme_light = false
-
+        
         localStorage.setItem('theme', 'dark')
         
     }
@@ -78,10 +81,10 @@ theme_toggler.addEventListener('click', (event)=>{
     else{
         bg.style.backgroundColor = 'white'
         bg.style.color = 'rgb(31, 31, 31)';
-        theme_toggler.style.backgroundColor = 'white'
-        theme_light = true
+        theme_toggler.style.backgroundColor = 'white';
+        theme_light = true;
 
-        localStorage.setItem('theme', 'light')
+        localStorage.setItem('theme', 'light');
     }
 })
 
