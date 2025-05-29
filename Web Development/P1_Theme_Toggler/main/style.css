@@ -12,41 +12,43 @@ body{
     color: var(--text-color);
     width: 100vw;
     height: 100vh;
-    transition: background-color 0.4s, color 0.4s;
+    transition: background-color 1s, color 1s;
 }
 header{
     display: flex;
     justify-content: space-around;
 }
-header div{
+.header_div{
     display: flex;
     width: 90vw;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(135deg, rgb(255, 117, 117), rgb(255, 199, 96));
-    border-radius: 5px;
+    border-radius: 20px;
+    border: solid black 2px;    
 }
 #toggle_theme {
     position: relative;
-    width: 4vw;
-    height: 75%;
+    width: 70px;
+    height: 28px;
     background-color: #ddd;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle {
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border: solid black 1px;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50%;
-    transition: left 0.3s ease; background-color: 0.3s ease;
+    transition: left 1s ease; background-color: 1s ease;
 }
 main{
     padding: 0 5vw 0 5vw;
