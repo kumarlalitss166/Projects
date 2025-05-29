@@ -18,7 +18,7 @@ This is a simple yet interactive **Theme Toggler** project built using **HTML**,
 
 ## 📸 Preview
 
-![Theme Toggler Screenshot](./preview.png)
+![Theme Toggler Screenshot](./Light_theme.png ./Dark_theme.png)
 
 > *(Tip: Upload a screenshot named `preview.png` in your repo for this image to display)*
 
@@ -36,4 +36,4 @@ This is a simple yet interactive **Theme Toggler** project built using **HTML**,
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/theme-toggler.git
+   git clone https://github.com/your-username/Projects.git
