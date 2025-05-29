@@ -18,10 +18,10 @@ This is a simple yet interactive **Theme Toggler** project built using **HTML**,
 
 ## 📸 Preview
 
-**Light Theme View**
+- **Light Theme View**
 ![Light Theme Toggler Screenshot](./Light_theme.png)
 
-**Dark Theme View**
+- **Dark Theme View**
 ![Dark Theme Toggler Screenshot](./Dark_theme.png)
 
 
