@@ -24,9 +24,6 @@ This is a simple yet interactive **Theme Toggler** project built using **HTML**,
 - **Dark Theme View**
 ![Dark Theme Toggler Screenshot](./Dark_theme.png)
 
-
-> *(Tip: Upload a screenshot named `preview.png` in your repo for this image to display)*
-
 ---
 
 ## 🛠️ Tech Stack
