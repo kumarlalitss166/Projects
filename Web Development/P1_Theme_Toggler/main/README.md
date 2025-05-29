@@ -18,8 +18,8 @@ This is a simple yet interactive **Theme Toggler** project built using **HTML**,
 
 ## 📸 Preview
 
-![Theme Toggler Screenshot](./Light_theme.png)
-![Theme Toggler Screenshot](./Dark_theme.png)
+![Light Theme Toggler Screenshot](./Light_theme.png)
+![Dark Theme Toggler Screenshot](./Dark_theme.png)
 
 
 > *(Tip: Upload a screenshot named `preview.png` in your repo for this image to display)*
