@@ -2,7 +2,7 @@
 
 This is a simple yet interactive **Theme Toggler** project built using **HTML**, **CSS**, and **JavaScript**. It allows users to switch between light and dark modes, and remembers their preference using `localStorage`.
 
-> 💡 Built as part of my **Web Development journey** under the guidance of **Rohit Negi Sir**.
+> 💡 Built as part of my **Web Development journey**  by **Rohit Negi Sir**.
 
 ---
 
